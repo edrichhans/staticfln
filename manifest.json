@@ -2,18 +2,12 @@
   "manifest_version": 2,
   "name": "Freelancer",
   "version": "0.1",
-  "background": {
-    "scripts": ["redirect.js"]
-  },
   "content_scripts": [
   {
     "matches": [
       "https://www.upwork.com/*"
     ],
-    "js": ["jquery-3.2.1.min.js"],
-    "web_accessible_resources": [
-      "FREELANCER.html", "custom.js"
-    ]
+    "js": ["jquery-3.2.1.min.js", "redirect.js"]
   },
   {
     "matches": [
