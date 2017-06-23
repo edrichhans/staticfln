@@ -1,0 +1,119 @@
+.body {
+    background-color: #5BBCE3;
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    clip-path: polygon(47% 22%, 64% 23%, 59% 48%, 47% 61%, 34% 47%);
+}
+
+.front-wing {
+    background-color: #0193CF;
+    z-index: 3;
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    clip-path: polygon(9% 20%, 34% 47%, 47% 22%);
+    /*transform-style: preserve-3d;
+    transition: 1s ease-in-out;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;*/
+    transform-origin: 47% 22%;
+    animation: flap-front 1.25s ease-out 0s infinite;
+}
+
+.upper-wing {
+    background-color: #0193CF;
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    clip-path: polygon(25% 14%, 37% 41%, 47% 22%);
+    transform-origin: 37% 41%;
+    animation: flap-front 1.25s ease-out 0s infinite;
+}
+
+.neck {
+    background-color: #B4D8F0;
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    clip-path: polygon(57% 16%, 48% 22%, 64% 23%);
+}
+
+.head {
+    background-color: #0193CF;
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    clip-path: polygon(57% 16%, 64% 23%, 96% 15%);
+}
+
+.tail {
+    background-color: #0193CF;
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    clip-path: polygon(36% 49%, 30% 78%, 47% 61%);
+}
+
+/*.front-wing.fly:hover {
+    -webkit-transform: rotate3d(0.13,-0.25,0,-45deg);
+    -moz-transform: rotateY(60deg);
+    -o-transform: rotateY(60deg);
+    -ms-transform: rotateY(60deg);
+    transform: rotateY(60deg);
+}*/
+
+@keyframes flap-front {
+  5% {
+    transform: rotate3d(0.13,-0.25,0,-70deg)
+  }
+  10% {
+    transform: rotate3d(0.13,-0.25,0,0deg)
+  }
+  15% {
+    transform: rotate3d(0.13,-0.25,0,-90deg)
+  }
+  20% {
+    transform: rotate3d(0.13,-0.25,0,0deg)
+  }
+  25% {
+    transform: rotate3d(0.13,-0.25,0,-110deg)
+  }
+  35% {
+    transform: rotate3d(0.13,-0.25,0,0deg)
+  }
+  45% {
+    transform: rotate3d(0.13,-0.25,0,-160deg)
+  }
+  100% {
+    transform: rotate3d(0.13,-0.25,0,0deg)
+  }
+}
+
+@keyframes flap-back {
+  5% {
+    transform: rotate3d(0.10,-0.19,0,70deg)
+  }
+  10% {
+    transform: rotate3d(0.10,-0.19,0,0deg)
+  }
+  15% {
+    transform: rotate3d(0.10,-0.19,0,90deg)
+  }
+  20% {
+    transform: rotate3d(0.10,-0.19,0,0deg)
+  }
+  25% {
+    transform: rotate3d(0.10,-0.19,0,110deg)
+  }
+  35% {
+    transform: rotate3d(0.10,-0.19,0,0deg)
+  }
+  45% {
+    transform: rotate3d(0.10,-0.19,0,160deg)
+  }
+  100% {
+    transform: rotate3d(0.10,-0.19,0,0deg)
+  }
+}
