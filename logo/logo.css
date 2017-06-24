@@ -14,13 +14,9 @@
     height: 700px;
     position: absolute;
     clip-path: polygon(9% 20%, 34% 47%, 47% 22%);
-    /*transform-style: preserve-3d;
-    transition: 1s ease-in-out;
-    -webkit-transition: 1s ease-in-out;
-    -moz-transition: 1s ease-in-out;
-    -o-transition: 1s ease-in-out;*/
+    -webkit-clip-path: polygon(9% 20%, 34% 47%, 47% 22%);
     transform-origin: 47% 22%;
-    animation: flap-front 1.25s ease-out 0s infinite;
+    animation: flap-front 1.75s ease-out 0s infinite;
 }
 
 .upper-wing {
@@ -29,8 +25,9 @@
     height: 700px;
     position: absolute;
     clip-path: polygon(25% 14%, 37% 41%, 47% 22%);
+    -webkit-clip-path: polygon(25% 14%, 37% 41%, 47% 22%);
     transform-origin: 37% 41%;
-    animation: flap-front 1.25s ease-out 0s infinite;
+    animation: flap-front 1.75s ease-out 0s infinite;
 }
 
 .neck {
@@ -39,6 +36,7 @@
     height: 700px;
     position: absolute;
     clip-path: polygon(57% 16%, 48% 22%, 64% 23%);
+    -webkit-clip-path: polygon(57% 16%, 48% 22%, 64% 23%);
 }
 
 .head {
@@ -47,8 +45,9 @@
     height: 700px;
     position: absolute;
     clip-path: polygon(57% 16%, 64% 23%, 96% 15%);
+    -webkit-clip-path: polygon(57% 16%, 64% 23%, 96% 15%);
     transform-origin: 57% 16%;
-    animation: tilt-head 1.25s ease-out 0s infinite;
+    animation: tilt-head 1.75s ease-out 0s infinite;
 }
 
 .tail {
@@ -57,35 +56,39 @@
     height: 700px;
     position: absolute;
     clip-path: polygon(36% 49%, 30% 78%, 47% 61%);
+    -webkit-clip-path: polygon(36% 49%, 30% 78%, 47% 61%);
     transform-origin: 47% 61%;
-    animation: tilt-tail 1.25s ease-out 0s infinite;
+    animation: tilt-tail 1.75s ease-out 0s infinite;
 }
 
 .logo {
-    animation: translate-logo 1.25s ease-out 0s infinite;
+    animation: translate-logo 1.75s ease-out 0s infinite;
 }
 
 @keyframes flap-front {
-  5% {
+  4% {
     transform: rotate3d(0.13,-0.25,0,-70deg)
   }
-  10% {
+  8% {
     transform: rotate3d(0.13,-0.25,0,0deg)
   }
-  15% {
+  12% {
     transform: rotate3d(0.13,-0.25,0,-90deg)
   }
-  20% {
+  16% {
     transform: rotate3d(0.13,-0.25,0,0deg)
   }
-  25% {
+  20% {
     transform: rotate3d(0.13,-0.25,0,-110deg)
   }
-  35% {
+  28% {
     transform: rotate3d(0.13,-0.25,0,0deg)
   }
-  50% {
+  40% {
     transform: rotate3d(0.13,-0.25,0,-160deg)
+  }
+  80% {
+    transform: rotate3d(0.13,-0.25,0,0deg)
   }
   100% {
     transform: rotate3d(0.13,-0.25,0,0deg)
@@ -93,26 +96,29 @@
 }
 
 @keyframes flap-back {
-  5% {
+  4% {
     transform: rotate3d(0.10,-0.19,0,70deg)
   }
-  10% {
+  8% {
     transform: rotate3d(0.10,-0.19,0,0deg)
   }
-  15% {
+  12% {
     transform: rotate3d(0.10,-0.19,0,90deg)
   }
-  20% {
+  16% {
     transform: rotate3d(0.10,-0.19,0,0deg)
   }
-  25% {
+  20% {
     transform: rotate3d(0.10,-0.19,0,110deg)
   }
-  35% {
+  28% {
     transform: rotate3d(0.10,-0.19,0,0deg)
   }
-  50% {
+  40% {
     transform: rotate3d(0.10,-0.19,0,160deg)
+  }
+  80% {
+    transform: rotate3d(0.10,-0.19,0,0deg)
   }
   100% {
     transform: rotate3d(0.10,-0.19,0,0deg)
@@ -123,17 +129,20 @@
     0% {
         transform: rotateZ(2deg);
     }
-    10% {
+    8% {
         transform: rotateZ(1.9deg);
     }
-    20% {
+    16% {
         transform: rotateZ(1.6deg);
     }
-    35% {
+    28% {
         transform: rotateZ(1deg);
     }
-    50% {
+    40% {
         transform: rotateZ(0deg);
+    }
+    80% {
+        transform: rotateZ(2deg);
     }
     100% {
         transform: rotateZ(2deg);
@@ -144,17 +153,20 @@
     0% {
         transform: rotateZ(0deg);
     }
-    10% {
+    8% {
         transform: rotateZ(0.1deg);
     }
-    20% {
+    16% {
         transform: rotateZ(0.4deg);
     }
-    35% {
+    28% {
         transform: rotateZ(1deg);
     }
-    50% {
+    40% {
         transform: rotateZ(2deg);
+    }
+    80% {
+        transform: rotateZ(0deg);
     }
     100% {
         transform: rotateZ(0deg);
@@ -165,17 +177,20 @@
     0% {
         transform: translate(0px, 0px);
     }
-    10% {
+    8% {
         transform: translate(-0.5px, -0.1px);
     }
-    20% {
+    16% {
         transform: translate(-2px, -0.4px);
     }
-    35% {
+    28% {
         transform: translate(-5px, -1px);
     }
-    50% {
+    40% {
         transform: translate(-10px, -2px);
+    }
+    80% {
+        transform: translate(0px, 0px);
     }
     100% {
         transform: translate(0px, 0px);
