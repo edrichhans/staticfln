@@ -1,8 +1,8 @@
 .body {
     background-color: #5BBCE3;
     z-index: 2;
-    width: 1000px;
-    height: 1000px;
+    width: 700px;
+    height: 700px;
     position: absolute;
     clip-path: polygon(47% 22%, 64% 23%, 59% 48%, 47% 61%, 34% 47%);
 }
@@ -10,8 +10,8 @@
 .front-wing {
     background-color: #0193CF;
     z-index: 3;
-    width: 1000px;
-    height: 1000px;
+    width: 700px;
+    height: 700px;
     position: absolute;
     clip-path: polygon(9% 20%, 34% 47%, 47% 22%);
     /*transform-style: preserve-3d;
@@ -25,8 +25,8 @@
 
 .upper-wing {
     background-color: #0193CF;
-    width: 1000px;
-    height: 1000px;
+    width: 700px;
+    height: 700px;
     position: absolute;
     clip-path: polygon(25% 14%, 37% 41%, 47% 22%);
     transform-origin: 37% 41%;
@@ -35,16 +35,16 @@
 
 .neck {
     background-color: #B4D8F0;
-    width: 1000px;
-    height: 1000px;
+    width: 700px;
+    height: 700px;
     position: absolute;
     clip-path: polygon(57% 16%, 48% 22%, 64% 23%);
 }
 
 .head {
     background-color: #0193CF;
-    width: 1000px;
-    height: 1000px;
+    width: 700px;
+    height: 700px;
     position: absolute;
     clip-path: polygon(57% 16%, 64% 23%, 96% 15%);
     transform-origin: 57% 16%;
@@ -53,21 +53,17 @@
 
 .tail {
     background-color: #0193CF;
-    width: 1000px;
-    height: 1000px;
+    width: 700px;
+    height: 700px;
     position: absolute;
     clip-path: polygon(36% 49%, 30% 78%, 47% 61%);
     transform-origin: 47% 61%;
     animation: tilt-tail 1.25s ease-out 0s infinite;
 }
 
-/*.front-wing.fly:hover {
-    -webkit-transform: rotate3d(0.13,-0.25,0,-45deg);
-    -moz-transform: rotateY(60deg);
-    -o-transform: rotateY(60deg);
-    -ms-transform: rotateY(60deg);
-    transform: rotateY(60deg);
-}*/
+.logo {
+    animation: translate-logo 1.25s ease-out 0s infinite;
+}
 
 @keyframes flap-front {
   5% {
@@ -162,5 +158,26 @@
     }
     100% {
         transform: rotateZ(0deg);
+    }
+}
+
+@keyframes translate-logo {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    10% {
+        transform: translate(-0.5px, -0.1px);
+    }
+    20% {
+        transform: translate(-2px, -0.4px);
+    }
+    35% {
+        transform: translate(-5px, -1px);
+    }
+    50% {
+        transform: translate(-10px, -2px);
+    }
+    100% {
+        transform: translate(0px, 0px);
     }
 }
